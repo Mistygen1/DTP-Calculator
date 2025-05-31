@@ -12,16 +12,17 @@ const calculateTime = () => {
 }
 
 const calculateLabPoints = () => {
-    let currPoints = parseInt(points.value);
-    let genExpPoints;
-    let commExpPoints
+    let currPoints = points.value;
+    let genExpPoints = 0;
+    let commExpPoints = 0;
 
     for(let i = 1;i <= currPoints;i++){
-        if(i % 5){
+        if(i % 5 == 0){       
             genExpPoints++;
         }
         commExpPoints++;
     }
+    
     genExp.innerHTML = "Points in gen power exponent: " + genExpPoints
     commExp.innerHTML = "Points in common exponent: " + commExpPoints
 }
