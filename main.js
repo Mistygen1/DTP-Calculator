@@ -7,9 +7,14 @@ const genExp = document.getElementById("genPowerExp")
 const commExp = document.getElementById("commonExp")
 
 const calculateTime = () => {
-    const timeInHouers = (dpcost.value / dps.value)/60/60;
-    result.innerHTML = "Time in hours: " + timeInHouers.toFixed(2)
+    const cost = new Decimal(dpcost.value);
+    const speed = new Decimal(dps.value);
+    const timeInSeconds = cost.div(speed);
+    const timeInHours = timeInSeconds.div(3600);
+
+    result.innerHTML = "Time in hours: " + timeInHours.toFixed(2);
 }
+
 
 const calculateLabPoints = () => {
     let currPoints = points.value;
