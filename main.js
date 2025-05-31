@@ -8,7 +8,7 @@ const commExp = document.getElementById("commonExp")
 
 const calculateTime = () => {
     const timeInHouers = (dpcost.value / dps.value)/60/60;
-    result.innerHTML = "Time in houers: " + timeInHouers
+    result.innerHTML = "Time in houers: " + timeInHouers.toFixed(2)
 }
 
 const calculateLabPoints = () => {
