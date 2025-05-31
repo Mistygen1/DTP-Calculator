@@ -12,7 +12,7 @@ const calculateTime = () => {
 }
 
 const calculateLabPoints = () => {
-    let currPoints = points.value;
+    let currPoints = parseInt(points.value);
     let genExpPoints;
     let commExpPoints
 
