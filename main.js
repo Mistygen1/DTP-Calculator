@@ -19,8 +19,9 @@ const calculateLabPoints = () => {
     for(let i = 1;i <= currPoints;i++){
         if(i % 5 == 0){       
             genExpPoints++;
+        }else{
+            commExpPoints++;
         }
-        commExpPoints++;
     }
     
     genExp.innerHTML = "Points in gen power exponent: " + genExpPoints
